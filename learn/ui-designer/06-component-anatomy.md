@@ -280,15 +280,15 @@ graph TD
 
 ```mermaid
 stateDiagram-v2
-    [*] --> Default
-    Default --> Hover : 鼠标移入
-    Hover --> Default : 鼠标移出
+    [*] --> Idle
+    Idle --> Hover : 鼠标移入
+    Hover --> Idle : 鼠标移出
     Hover --> Pressed : 鼠标按下
     Pressed --> Hover : 鼠标释放
-    Default --> Focus : 键盘 Tab
-    Focus --> Default : 失去焦点
-    Default --> Disabled : 设置禁用
-    Disabled --> Default : 解除禁用
+    Idle --> Focus : 键盘 Tab
+    Focus --> Idle : 失去焦点
+    Idle --> Disabled : 设置禁用
+    Disabled --> Idle : 解除禁用
 ```
 
 ### 状态视觉规范
